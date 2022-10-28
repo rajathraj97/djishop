@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans:ital,wght@0,400;0,500;1,500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/837b4e13af.js" crossorigin="anonymous"></script>   
+
+    <link rel="stylesheet" href="style/style.css">
+    <title>Project DJI</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCA0MiAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMzIuNTQ4NDE2MyA0Ljg4MTM1NTFjLS43MDM0MjIxIDIuNjEzNzk5Ny0xLjQwMzY4MzEgNS4yMjgzNDMyLTIuMDg5NjI2NiA3Ljg0Njc5MTUtLjM0MzA2NDcgMS4zMDkwMzgzLS42Nzk4MDczIDIuNjE5MDA2Mi0xLjA3NDc1MDEgMy45MTQyODQ2LS4zODM2MDAzIDEuMjU4NDYxNy0uODU0Nzc5NyAyLjYwMTcxMzQtMS41NDE0NjY5IDMuNzQ0NzA0Ni0uNzE2MjUyMSAxLjE5MjgyMzktMS42NDM3MzU1IDIuMTI0MjEyLTIuOTI3Mjk5NSAyLjcyMDUzMS0uNTEzMjAyNS4yMzgxOTI5LTEuMDM5MDQ5MS40MDE2MzY3LTEuNTkwNzQxNy41MTg1OTQ4LS43ODI4MTk4LjE2NTg2MTEtMS41NjkxNzI0LjIzNDEwMjEtMi4zNjQ2MzYyLjI3OTEwMDMtMS45Njk4Nzk0LjExMTAwOC02LjE0ODc2MDcuMDk0NDU5LTguMTE4MDgyMy4wOTQ0NTlsMS4yMDczMjc0LTQuNDc0NTMwNmMuOTEzOTA5NSAwIDEuODI3NjMzMS4wMDMxNjExIDIuNzQxMzU2Ni0uMDIyMTI3Mi44ODE3NDE0LS4wMjQ1NDQ0IDEuODUxOTkxNi0uMDcxNzczOSAyLjcyMDM0NS0uMjc3MDU0OS45NTA5MTIyLS4yMjQ5OTEgMS42Njg0NjU5LS42MTEwMDg1IDIuMjk2OTUzLTEuMzg0NzE3LjU3MjUxODMtLjcwNDcyMzcuOTU3NDIwMS0xLjU4NDA0NzggMS4yNzI3Nzk0LTIuNDEzMzUzMy41NzYwNTExLTEuNTE0NTA1MSAxLjE2NTg2MjEtMy42ODI5NzE1IDEuNTgxNjMwNS01LjI0MjQ3NDguNDcwMjQ5Ny0xLjc2NTM0MjIuOTIyMjc2OS0zLjUzNTE0NyAxLjM3NzgzNzEtNS4zMDQyMDh6bTguMTM1NTQyMy0uMDAwMDM3MmwtMy41MTIwOSAxMy4wMTY5MzQ2aC02LjUwODE4ODRsMy41MTE5MDQxLTEzLjAxNjkzNDZoNi41MDgzNzQzek0xOS4yMjExODAxIDBoNi41MDgzNzQ0Yy0uNjgxODUyNyAyLjU0MDkxMDEtMS4zNjI3NzU3IDUuMDgyMDA2MS0yLjA1MjQzOCA3LjYyMDg3MDktLjQ4MDY2MjUgMS43Njg2ODktLjk1Nzk3OCAzLjUzODEyMi0xLjQ3OTczMzkgNS4yOTU0Njg2LS4yMjc1OTQxLjc2NjA4NDgtLjQ1NDgxNjQgMS41Mjk5Mzg0LS43NTMwNjg4IDIuMjczNzEwMS0uMjM5NjgwNS41OTc0MzQ2LS41MDc2MjQyIDEuMTI5MDQ1NS0xLjAwMjk3NjIgMS41NzU0OTQ0LS4zNzAwMjY0LjMzMzM5NTctLjc3MzUyMjUuNTQwNzIyLTEuMjQzNDAwMy42ODg1NDY3LS42MDQ1MDA1LjE5MDIxOTYtMS4yMTU1MDg5LjI1OTk0ODItMS44NDAwOTEyLjMxMTA4MjUtLjg5ODI5MDMuMDczNjMzNC0xLjc5Njc2NjUuMDkyNDEzNi0yLjY5NjU0NDQuMTA2OTE3Mi0yLjA2OTM1ODguMDMzMjgzOC01LjgyNzI2NTMuMDI4NjM1Mi03Ljg5NjYyNDIuMDE5NzA5OS0uNzQzNTg1OC0uMDAzMzQ2OS0xLjQ4NzE3MTUtLjAwNzgwOTYtMi4yMzA3NTczLS4wMjEzODM0LS41MzkwNDg1LS4wMDk2NjktMS4wNzc1MzkyLS4wMjMwNTY5LTEuNjE1ODQ0LS4wNTY3MTI2LS4zNTk0Mjc3LS4wMjI2ODUtLjcxNjA2NjItLjA1MjgwNzgtMS4wNzEyMTcyLS4xMTgyNTk3LS4yNDA5ODItLjA0NDI1NDQtLjQ3MzAzODgtLjEwMzc1NjItLjY5OTE0NTQtLjIwMjQ5MTktLjc0NDcwMTQtLjMyNTQwMDEtMS4xMjQyMTEtLjk3NTgyODQtMS4xNDYzMzgyLTEuNzY3OTQ1My0uMDEyODMtLjQ1MzMyODkuMDY2MDA5OC0uODg1MDg4My4xNTY3NS0xLjMyMzU0MTguMTI4ODU4NC0uNjIxMDQ5My4yODkzMjcxLTEuMjMzNTQ1My40NDgzMDgzLTEuODQ2Nzg1MS4zMDM0NTg5LTEuMTcxNjI2NC44NTg4NzA0LTMuMzMzMzk4OSAxLjI5MTc0NTUtNC40NzEzNjk2LjMzOTE2LS44OTE3ODIzLjc4NzA5NjQtMS43NzkyODc4IDEuNjM4MTU3Mi0yLjM0MzgxMDYuNDc1ODI4LS4zMTU1NDUxLjk3NTgyODUtLjQ4MzI2NTYgMS41MjcxNDkzLS41OTQyNzM2LjQwODcwMjUtLjA4MjE4NjcuODE5NDUwNS0uMTI1Njk3NCAxLjIzMzkxNzItLjE1NjU2NC42OTQxMjUtLjA1MTUwNjEgMS4zODg4MDc4LS4wNjc2ODMxIDIuMDg0MjM0My0uMDc5OTU1NC45ODgyODY3LS4wMTcyOTI3IDEuOTc2NTczMy0uMDIxMDExNSAyLjk2NDg2LS4wMjM5ODY2bDIuNDY1MzAxLS4wMDMzNDdoMi40NjUxNjE2bC0uODc4MDIyNSAzLjI1NDE4NzJjLTEuNDY1MjMwMiAwLTIuOTMwMDg4Ni0uMDA0MDkwOC00LjM5NTMxODkuMDA0NDYyNi0uNDI3NjY4Ny4wMDI2MDMyLS44NTQ3Nzk2LS4wMDA1NTc4LTEuMjgyMDc2NC4wMjczMzM2LS4xNTE3Mjk1LjAwOTg1NS0uMjk5OTI2LjAxOTcxLS40NDY2MzUuMDcxMDMwMi0uMTkzMDA4Ny4wNjY5Mzk1LS4yODgzOTc1LjE4ODE3NDMtLjM3MzE4NzQuMzYyMjE2OS0uMTI0MDI0LjI1NDc0MTgtLjE5NTYxMi41MjM0MjkzLS4yNzQ2Mzc3Ljc5MjMwMjgtLjEyMDY3Ny40MTA1NjItLjIzMjQyODcuODIzNTQxMi0uMzQ0MzY2MyAxLjIzNjcwNjQtLjE3MjM2OTEuNjM2NDgyNi0uMzQ0NzM4MiAxLjI3Mjk2NTItLjUwODM2OCAxLjkxMTg2NTEtLjA2MDQzMTQuMjM2NTE5NC0uMTE5NzQ3Mi40NzMwMzg5LS4xNzA2OTU2LjcxMTc4OTYtLjAzNTg4Ny4xNjczNDg2LS4wNjgyNDEuMzM0MTM5NC0uMDg0MjMyMS41MDQ4MzUtLjAxNzQ3ODcuMTg2Njg2Ny0uMDIyODcxLjQxMDkzMzkuMDkwMTgyMy41ODQyMzI3LjExNDkxMjcuMTc1OTAyLjMwOTIyMy4yMTY4MDk0LjQ5MDUxNzQuMjQzMDI3NC4yMDQ5MDkxLjAyOTkzNjguNDEwMTkwMS4wMzY0NDQ4LjYxNjIxNDkuMDQyNTgwOS4zMzczMDA0LjAxMDIyNjkuNjc0NjAxLjAxMTcxNDQgMS4wMTE5MDE0LjAxMzM4NzkuOTIyODM0Ny4wMDQ0NjI2IDEuODQ1NjY5NS4wMDQ2NDg2IDIuNzY4NTA0Mi0uMDAxMTE1Ni40MjUyNTE1LS4wMDI2MDMyLjg1MDEzMTEtLjAwNTU3ODMgMS4yNzUwMTA3LS4wMjI2ODUxLjI5MjY3NDEtLjAxMTcxNDQuNTgxNjI5NS0uMDIxNzU1My44Njk4NDEtLjA5MTQ4MzkuMjE5MDQwOC0uMDUyOTkzNy4zOTAyOTQyLS4xMzYyOTYyLjUzODQ5MDctLjMxNTM1OTIuMTAwMjIzMi0uMTIxMjM0OC4xNjU2NzUyLS4yNTU2NzE1LjIyNTU0ODgtLjM5ODQ3NTcuMTQ4NzU0My0uMzU0MDM1My4yNTI2OTY0LS43MjA1Mjg4LjM2MTEwMTEtMS4wODY4MzY0LjQxNTk1NDQtMS40MDUxNzA3Ljc5MDYyOTQtMi44MjExMjYgMS4xNzM0ODU5LTQuMjM1NDA4bDEuMTQzNDA5NS00LjI0NDE0NzNMMTkuMjIxMTgwMSAwaDYuNTA4Mzc0NHoiIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==" alt="Bootstrap" width="40" height="34">
+      </a>
+      <a class="nav-link-1" href="#contact"><strong> Purchase </strong></a>
+      <a class="nav-link-2" href="#contact"><strong>Rental</strong></a>
+      <a class="nav-link-3" href="#contact"><strong>Repairs</strong></a>
+  </nav>
+  </nav>
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://assets.pandaily.com/uploads/2022/09/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1-96.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="Carousel-title-1"> <strong> Mavic 3 Enterprise </strong></h5>
+          <p class="carousel-paragraph">Your Everyday Commercial Drone </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://fdn.gsmarena.com/imgroot/news/22/05/dji-mini-3-pro-official/-1200/gsmarena_001.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 Class="Carousel-title-2"><strong>DJI MINI 3</strong>PRO</h5>
+          <p class="carousel-paragarph-2">Fly Mini Create Big</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.lacameraembarquee.fr/blog/wp-content/uploads/2022/08/Nouveau-drone-DJI-Avata-885x437.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="Carousel-title-3"> <strong>DJI Avata</strong></h5>
+          <p class="carousel-paragraph">Born To Fly</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="rental">
+    <h1>RENTAL OPTIONS</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 col-sm-6">
+        <div class="pricing-table-3 basic">
+            <div class="pricing-table-header">
+                <h4><strong>Mavic Mini 1</strong></h4>
+                <p>1st generation mavic drone</p>
+            </div>
+            <div class="price"><strong>₹ 1800</strong> / DAY</div>
+            <div class="pricing-body">
+                <ul class="pricing-table-ul">
+                    <li><i class="fa fa-send"></i> 15 meter height limit</li>
+                    <li><i class="fa fa-cloud"></i> 13 Megapixel , 2.7k recording quality </li>
+                    <li><i class="fa fa-database"></i> 64GB Storage Space</li>
+                    <li class="not-avail"><i class="fa fa-clock-o"></i> 24X7 Support</li>
+                    <li class="not-avail"><i class="fa fa-envelope"></i> Email Support</li>
+                </ul><a href="#contact" class="view-more">BOOK NOW</a></div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <div class="pricing-table-3 premium">
+            <div class="pricing-table-header">
+                <h4><strong>Mavic Mini 2</strong></h4>
+                <p>2nd generation DJI drone</p>
+            </div>
+            <div class="price"><strong>₹ 2500</strong> / DAY</div>
+            <div class="pricing-body">
+                <ul class="pricing-table-ul">
+                    <li><i class="fa fa-send"></i> 15 meter height limit</li>
+                    <li><i class="fa fa-cloud"></i> 18 Megapixel , 3.2k recording quality</li>
+                    <li><i class="fa fa-database"></i> 64GB Space</li>
+                    <li class="not-avail"><i class="fa fa-clock-o"></i> 24X7 Support</li>
+                    <li class="not-avail"><i class="fa fa-envelope"></i> Email Support</li>
+                </ul><a href="#contact" class="view-more">BOOK NOW</a></div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+        <div class="pricing-table-3 business">
+            <div class="pricing-table-header">
+                <h4><strong>Mavic Mini 3 Pro</strong></h4>
+                <p>3rd generation recently launched </p>
+            </div>
+            <div class="price"><strong>₹3200</strong> / DAY</div>
+            <div class="pricing-body">
+                <ul class="pricing-table-ul">
+                    <li><i class="fa fa-send"></i> 120 meter height limit</li>
+                    <li><i class="fa fa-cloud"></i> 24 Megapixel, 4k recording quality, portrait mode</li>
+                    <li><i class="fa fa-database"></i> 128GB Space</li>
+                    <li class="not-avail"><i class="fa fa-clock-o"></i> 24X7 Support</li>
+                    <li class="not-avail"><i class="fa fa-envelope"></i> Email Support</li>
+                </ul><a href="#contact" class="view-more">BOOK NOW</a></div>
+        </div>
+    </div>
+</div>
+
+<div class="purchase">
+  <h1>PURCHASE OPTION</h1>
+</div>
+
+
+
+<div class="container d-flex justify-content-center mt-50 mb-50">
+            
+  <div class="row">
+     <div class="col-md-4 mt-2">
+      
+          
+          <div class="card">
+                              <div class="card-body">
+                                  <div class="card-img-actions">
+                                      
+                                          <img src="https://stormsend1.djicdn.com/tpc/uploads/carousel/image/dd995654e25b8b87d032d3c4809a0b35@ultra.jpg" class="card-img img-fluid" width="96" height="350" alt="">
+                                        
+                                     
+                                  </div>
+                              </div>
+
+                              <div class="card-body bg-light text-center">
+                                  <div class="mb-2">
+                                      <h6 class="font-weight-semibold mb-2">
+                                          <a href="#" class="text-default mb-2" data-abc="true">DJI Mini 3 Pro With Smart RC</a>
+                                      </h6>
+
+                                      <a href="#" class="text-muted" data-abc="true">Drone</a>
+                                  </div>
+
+                                  <h3 class="mb-0 font-weight-semibold">₹92,000</h3>
+
+                                  
+
+                                  <div class="text-muted mb-3"></div>
+
+                                  <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2" ></i> Contact Now</button>
+
+                                  
+                              </div>
+                          </div>
+
+
+                      
+                       
+     </div> 
+
+
+     <div class="col-md-4 mt-2">
+      
+          
+          <div class="card">
+                              <div class="card-body">
+                                  <div class="card-img-actions">
+                                      
+                                          <img src="https://www.designinfo.in/wp-content/uploads/nc/p/5/2/8/1/2/52812-300x300.jpg" class="card-img img-fluid" width="96" height="350" alt="">
+                                        
+                                     
+                                  </div>
+                              </div>
+
+                              <div class="card-body bg-light text-center">
+                                  <div class="mb-2">
+                                      <h6 class="font-weight-semibold mb-2">
+                                          <a href="#" class="text-default mb-2" data-abc="true">DJI Mini 3 Pro Flymore Combo</a>
+                                      </h6>
+
+                                      <a href="#" class="text-muted" data-abc="true">Drone</a>
+                                  </div>
+
+                                  <h3 class="mb-0 font-weight-semibold">₹35,000</h3>
+
+                                  
+
+                                  <div class="text-muted mb-3"></div>
+
+                                  <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i>Contact Now</button>
+
+                                  
+                              </div>
+                          </div>
+
+
+                      
+                       
+     </div> 
+
+     <div class="col-md-4 mt-2">
+      
+          
+          <div class="card">
+                              <div class="card-body">
+                                  <div class="card-img-actions">
+                                      
+                                          <img src="https://stormsend1.djicdn.com/tpc/uploads/carousel/image/408497bfeb9bacb9af7db445bfdc51d2@ultra.jpg" class="card-img img-fluid" width="96" height="350" alt="">
+                                        
+                                     
+                                  </div>
+                              </div>
+
+                              <div class="card-body bg-light text-center">
+                                  <div class="mb-2">
+                                      <h6 class="font-weight-semibold mb-2">
+                                          <a href="#" class="text-default mb-2" data-abc="true">DJI Mini 2 Pro Flymore-Combo</a>
+                                      </h6>
+
+                                      <a href="#" class="text-muted" data-abc="true">Drones</a>
+                                  </div>
+
+                                  <h3 class="mb-0 font-weight-semibold">₹62,500</h3>
+
+                                  
+
+                                  <div class="text-muted mb-3">Contact Now</div>
+
+                                  <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i> Add to cart</button>
+
+                                  
+                              </div>
+                          </div>
+
+
+                      
+                       
+     </div> 
+
+
+     <div class="col-md-4 mt-2">
+      
+          
+          <div class="card">
+                              <div class="card-body">
+                                  <div class="card-img-actions">
+                                      
+                                          <img src="https://stormsend1.djicdn.com/tpc/uploads/carousel/image/d50bf28faaca37d27241c2b42e36d839@ultra.jpg" class="card-img img-fluid" width="96" height="350" alt="">
+                                        
+                                     
+                                  </div>
+                              </div>
+
+                              <div class="card-body bg-light text-center">
+                                  <div class="mb-2">
+                                      <h6 class="font-weight-semibold mb-2">
+                                          <a href="#" class="text-default mb-2" data-abc="true">DJI Air 2s Flymore Combo</a>
+                                      </h6>
+
+                                      <a href="#" class="text-muted" data-abc="true">Drone</a>
+                                  </div>
+
+                                  <h3 class="mb-0 font-weight-semibold">₹1,33,000</h3>
+
+                                  
+
+                                  <div class="text-muted mb-3"></div>
+
+                                  <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i>Contact Now</button>
+
+                                  
+                              </div>
+                          </div>
+
+
+                      
+                       
+     </div> 
+
+
+     <div class="col-md-4 mt-2">
+      
+          
+          <div class="card">
+                              <div class="card-body">
+                                  <div class="card-img-actions">
+                                      
+                                          <img src="https://stormsend1.djicdn.com/tpc/uploads/carousel/image/dd995654e25b8b87d032d3c4809a0b35@ultra.jpg" class="card-img img-fluid" width="96" height="350" alt="">
+                                        
+                                     
+                                  </div>
+                              </div>
+
+                              <div class="card-body bg-light text-center">
+                                  <div class="mb-2">
+                                      <h6 class="font-weight-semibold mb-2">
+                                          <a href="#" class="text-default mb-2" data-abc="true">DJI Mini 3 Pro With Fly More Combo</a>
+                                      </h6>
+
+                                      <a href="#" class="text-muted" data-abc="true">Drone</a>
+                                  </div>
+
+                                  <h3 class="mb-0 font-weight-semibold">₹1,11,500</h3>
+
+
+
+                                  <div class="text-muted mb-3"></div>
+
+                                  <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i>Contact Now</button>
+
+                                  
+                              </div>
+                          </div>
+
+
+                      
+                       
+     </div> 
+
+
+     <div class="col-md-4 mt-2">
+      
+          
+          <div class="card">
+                              <div class="card-body">
+                                  <div class="card-img-actions">
+                                      
+                                          <img src="https://m.media-amazon.com/images/I/313TwZwO4BL._AC_UY218_.jpg" class="card-img img-fluid" width="96" height="350" alt="">
+                                        
+                                     
+                                  </div>
+                              </div>
+
+                              <div class="card-body bg-light text-center">
+                                  <div class="mb-2">
+                                      <h6 class="font-weight-semibold mb-2">
+                                          <a href="#" class="text-default mb-2" data-abc="true">San Disk 128GB Memory Card</a>
+                                      </h6>
+
+                                      <a href="#" class="text-muted" data-abc="true">Drone Accories</a>
+                                  </div>
+
+                                  <h3 class="mb-0 font-weight-semibold">₹1,100</h3>
+
+                                  
+
+                                  <div class="text-muted mb-3"></div>
+
+                                  <button type="button" class="btn bg-cart" href="#contact" ><i class="fa fa-cart-plus mr-2"></i>Contact Now</button>
+
+                                  
+                              </div>
+                          </div>
+
+
+                      
+                       
+     </div> 
+
+
+
+
+
+  </div>
+</div>
+
+<div class="Contact-US" id="contact">
+    <h2>Contact US</h2>
+    
+    <div>
+    <i class="fa-brands fa-square-whatsapp fa-2xl"> 9901804647</i>
+    </div>
+    
+</div>

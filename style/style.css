@@ -1,0 +1,368 @@
+.nav-link-1, .nav-link-2, .nav-link-3{
+    color: azure;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 5px;
+    margin-left: 45px;
+    font-weight: 300;
+}
+.nav-link-1:hover{
+    color: #fff;
+}
+.nav-link-2:hover{
+    color: #fff;
+}
+.nav-link-3:hover{
+color: #fff;
+}
+.logo{
+    margin-left: 37px;
+}
+.image-1, .image-2, .image-3{
+    width: 100%;
+    height: auto;
+}
+.Carousel-title-1, .Carousel-title-2, .Carousel-title-3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 33px;
+    font-weight: 350;
+
+}
+.Carousel-title-2{
+    padding-top: 30%;
+    
+    margin-top: 40%;
+    font-weight: 400;
+}
+.carousel-paragraph{
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+    font-weight: 300;
+
+}
+.carousel-paragarph-2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+    font-weight: 300;
+    padding-bottom: 25%;
+    position: relative;
+
+}
+
+body{ 
+    background-color:#f0f3f6;
+  overflow-x: hidden;
+
+}
+h1,h2,h3,h4,h5,h6,div,input,p,a{
+    font-family: "Open Sans";  
+    margin:0px; 
+}
+
+h3{ 
+    font-size:22px;
+}
+.container-fluid,.container { 
+    margin:auto;
+  padding:0px 15px;
+  max-width:1200px;
+}
+label{
+  font-weight:500;
+}
+.form-group{
+  margin-bottom:5px;
+}
+
+
+input,textarea,select,button{ 
+    margin: 5px 0px ;
+    font-size:13px !important; 
+    border-radius:0px;
+}
+input[type=text],input[type=password],textarea,input[type=email],select,textarea{ 
+    width: 100%; 
+    border:1px solid #DADADA; 
+    padding: 5px 10px;  
+    height:45px;  
+}
+input[type=submit],input[type=button],input[type=reset],button{
+    border:none; 
+    font-size: 11px;  
+  border-radius:3px;
+  height:45px;
+  color:#FFF;
+}
+
+.btn:hover,.btn:focus{  
+    cursor:pointer; 
+    color:#FFF;
+}
+input[type=radio]{
+    margin:0px;
+    padding:0px; 
+    height:auto;
+}
+.form-control{ 
+    box-shadow:none !important;  
+  border-radius:0px;
+}
+.form-control:focus{
+    border:1px solid #CCC;
+}
+.btn:focus{
+  box-shadow:none !important;
+}
+
+textarea{ 
+    width: 100%;
+}
+input[type=reset]{ 
+    margin-left: 10px;
+}
+textarea{
+  min-height:100px;
+}
+a{ 
+    color: inherit;
+}
+a:hover,a:focus{ 
+    text-decoration: none !important; 
+    color: inherit !important;
+}
+ul{
+    margin: 0px; 
+    padding: 0px; 
+    list-style: none;
+}
+.relative{ 
+    position: relative;
+}
+.absolute{ 
+    position: absolute;
+}
+.fixed{ 
+    position: fixed;
+}
+
+.pricing-table-container{
+  padding:50px 0px;
+}
+.description{
+  padding:15px 0px;
+}
+.description a{
+  padding:10px;
+  font-size:13px;
+  display:block;
+  font-weight:bold;
+  border-bottom:1px solid #DDD;
+}
+.description a.active{
+  background-color:#FFF;
+  padding-left:25px;
+}
+@charset "utf-8";
+/* DEMO 01 */
+.pricing-table-3{
+  background-color:#FFF;
+  margin:15px auto;
+  box-shadow:0px 0px 25px rgba(0,0,0,0.1);
+  max-width:300px;
+  border-radius:0px 10px 0px 10px;
+  overflow:hidden;
+  position:relative;
+  min-height:250px;
+  transition:all ease-in-out 0.25s;
+}
+.pricing-table-3:hover{
+  transform:scale(1.1,1.1);
+  cursor:pointer;
+}
+
+.pricing-table-3.basic .price{
+  background-color:#28b6f6;
+  color:#FFF;
+}
+.pricing-table-3.premium .price{
+  background-color:#ff9f00;
+  color:#FFF;
+}
+.pricing-table-3.business .price{
+  background-color:#c3185c;
+  color:#FFF;
+}
+
+.pricing-table-3 .pricing-table-header{
+  background-color:#212121;
+  color:#FFF;
+  padding:20px 0px 0px 20px;
+  position:absolute;
+  z-index:5;
+}
+.pricing-table-3 .pricing-table-header p{
+  font-size:12px;
+  opacity:0.7;
+}
+.pricing-table-3 .pricing-table-header::before{
+  content:"";
+  position:absolute;
+  left:-50px;
+  right:-180px;
+  height:125px;
+  top:-50px;
+  background-color:#212121;
+  z-index:-1;
+  transform:rotate(-20deg)
+}
+
+.pricing-table-3 .price{
+  position:absolute;
+  top:0px;
+  text-align:right;
+  padding:110px 20px 0px 0px;
+  right:0px;
+  left:0px;
+  font-size:20px;
+  z-index:4;
+}
+.pricing-table-3 .price::before{
+  content:"";
+  position:absolute;
+  left:0px;
+  right:0px;
+  height:100px;
+  bottom:-25px;
+  background-color:inherit;
+  transform:skewY(10deg);
+  z-index:-1;
+  box-shadow:0px 5px 0px 5px rgba(0,0,0,0.05);
+}
+
+
+.pricing-table-3 .pricing-body{
+  padding:20px;
+  padding-top:200px;  
+}
+.pricing-table-3 .pricing-table-ul li{
+  color:rgba(0,0,0,0.7);
+  font-size:13px;
+  padding:10px;
+  border-bottom:1px solid rgba(0,0,0,0.1);
+}
+.pricing-table-3 .pricing-table-ul .fa{
+  margin-right:10px;
+}
+.pricing-table-3.basic .pricing-table-ul .fa{
+  color:#28b6f6;
+}
+.pricing-table-3.premium .pricing-table-ul .fa{
+  color:#ff9f00;
+}
+.pricing-table-3.business .pricing-table-ul .fa{
+  color:#c3185c;
+}
+.pricing-table-3 .view-more{
+  margin:10px 20px;
+  display:block;
+  text-align:center;
+  background-color:#212121;
+  padding:10px 0px;
+  color:#FFF;
+}
+
+.rental{
+    text-align: center;
+    padding-top: 13px;
+}
+.purchase{
+  text-align: center;
+  padding-top: 25px;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: .8125rem;
+  font-weight: 400;
+  line-height: 1.5385;
+  color: #333;
+  text-align: left;
+  background-color:#EAEAEA;
+}
+
+.mt-50{
+
+  margin-top: 50px;
+}
+
+.mb-50{
+
+  margin-bottom: 50px;
+}
+
+
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .1875rem;
+}
+
+.card-img-actions {
+  position: relative;
+}
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.card-img{
+
+  width: 350px;
+}
+
+.star{
+      color: red;
+}
+
+.bg-cart {
+  background-color:orange;
+  color:#fff;
+}
+
+.bg-cart:hover {
+  
+  color:#fff;
+}
+
+.bg-buy {
+  background-color:green;
+  color:#fff;
+  padding-right: 29px;
+}
+.bg-buy:hover {
+  
+  color:#fff;
+}
+
+a{
+
+  text-decoration: none !important;
+}
+
+.Contact-US{
+  text-align: center;
+  padding-bottom: 70px;
+}
